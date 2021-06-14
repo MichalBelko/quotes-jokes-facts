@@ -13,7 +13,6 @@ btnDadJoke.addEventListener("click", DadJoke);
 btnChuck.addEventListener("click", showChuck);
 btnQuote.addEventListener("click", showQuote);
 btnAdvice.addEventListener("click", giveAdvice);
-btnNumberFact.addEventListener("click", giveNumberFact);
 btnCatFact.addEventListener("click", giveBeerDescription);
 btnCovid.addEventListener("click", CovidCases);
 
@@ -36,16 +35,6 @@ async function giveBeerDescription() {
 
     const random = Math.floor(Math.random() * 25);
     text.textContent = `${data[random].name}  -  ${data[random].abv}%`;
-  } catch (err) {
-    alert(err);
-  }
-}
-
-async function giveNumberFact() {
-  try {
-    const res = await fetch("http://numbersapi.com/random/trivia?json");
-    const data = await res.json();
-    text.textContent = data.text;
   } catch (err) {
     alert(err);
   }
