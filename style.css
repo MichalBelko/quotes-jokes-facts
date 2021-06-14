@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-size: 20px;
+  text-align-last: center;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  padding: 1.5rem 0 2.5rem 0;
+  color: #fff;
+  text-align: center;
+  text-align-last: center;
+}
+
+.prvy {
+  height: 40%;
+  background-color: #0e2a47;
+  justify-content: center;
+}
+.druhy {
+  height: 25%;
+}
+.treti {
+  height: 35%;
+  background-color: #3076c2;
+}
+.custom-shape-divider-top-1620068521 {
+  background-color: #3076c2;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1620068521 svg {
+  position: relative;
+  display: block;
+  width: calc(108% + 1.3px);
+}
+
+.custom-shape-divider-top-1620068521 .shape-fill {
+  fill: #0e2a47;
+}
+
+.custom-btn {
+  padding: 10px 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  border-radius: 2px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dotted #3076c2;
+  border-top: 1px dotted #3076c2;
+  z-index: 1;
+  margin: 1rem 2.5rem 1rem 0;
+  justify-content: center;
+}
+
+.custom-btn:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #3076c2, -4px -4px 5px 0px #3076c2,
+    7px 7px 20px 0px #3076c2, 4px 4px 5px 0px #3076c2;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+.custom-btn:hover {
+  color: white;
+}
+.custom-btn:hover:after {
+  top: 0;
+  height: 100%;
+}
+.custom-btn:active {
+  top: 2px;
+}
+.text {
+  color: #0e2a47;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 5rem;
+}
+@media only screen and (max-width: 776px) {
+  .prvy {
+    height: 60%;
+  }
+  .custom-shape-divider-top-1620068521 {
+    height: auto;
+  }
+  .druhy {
+    height: 0;
+  }
+  /* .text {
+    font-size: 1.5rem;
+  } */
+  .treti {
+    padding: 4rem 0 2rem 0;
+    height: 40%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .text {
+    font-size: 1.5rem;
+  }
+  .treti {
+    padding: 4rem 0 1rem 0;
+    height: 40%;
+  }
+}
+@media only screen and (max-width: 488px) {
+  body {
+    overflow-x: scroll;
+  }
+  .text {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 438px) {
+  .prvy {
+    height: 80%;
+  }
+}
+@media only screen and (max-width: 392px) {
+  .prvy {
+    height: 90%;
+  }
+  .custom-btn {
+    font-size: 0.8rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
+  .treti {
+    height: auto;
+  }
+}
