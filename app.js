@@ -16,24 +16,6 @@ btnAdvice.addEventListener("click", giveAdvice);
 btnNumberFact.addEventListener("click", giveNumberFact);
 btnCatFact.addEventListener("click", giveBeerDescription);
 btnCovid.addEventListener("click", CovidCases);
-btn8.addEventListener("click", btn8Function);
-
-async function btn8Function() {
-  try {
-    const res = await fetch("http://api.worldbank.org/v2/country?format=json");
-    const data = await res.json();
-    const random = Math.floor(Math.random() * 50);
-    const name = data[1][random];
-    if (name.capitalCity !== "" && name.name !== "Bahamas, The") {
-      text.textContent = `${name.name} - ${name.capitalCity}`;
-    }
-    if (name.capitalCity === "") {
-      text.textContent = `${name.name} - NO CAPITAL`;
-    }
-  } catch (err) {
-    alert(err);
-  }
-}
 
 async function CovidCases() {
   try {
