@@ -3,11 +3,9 @@ const btnDadJoke = document.querySelector(".btn-2");
 const btnChuck = document.querySelector(".btn-3");
 const btnQuote = document.querySelector(".btn-1");
 const btnAdvice = document.querySelector(".btn-4");
-const btnNumberFact = document.querySelector(".btn-5");
 const btnCatFact = document.querySelector(".btn-6");
 const treti = document.querySelector(".treti");
 const btnCovid = document.querySelector(".btn-7");
-const btn8 = document.querySelector(".btn-8");
 
 btnDadJoke.addEventListener("click", DadJoke);
 btnChuck.addEventListener("click", showChuck);
