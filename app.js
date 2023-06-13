@@ -14,17 +14,6 @@ btnAdvice.addEventListener("click", giveAdvice);
 btnCatFact.addEventListener("click", giveBeerDescription);
 btnCovid.addEventListener("click", CovidCases);
 
-async function CovidCases() {
-  try {
-    const res = await fetch("https://api.covid19api.com/summary");
-    const data = await res.json();
-    const random = Math.floor(Math.random() * 190);
-    const deaths = data.Countries[random].TotalDeaths;
-    text.textContent = `${data.Countries[random].Country} : ${deaths} deaths on Covid`;
-  } catch (err) {
-    alert(err);
-  }
-}
 
 async function giveBeerDescription() {
   try {
